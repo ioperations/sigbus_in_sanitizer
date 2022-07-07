@@ -37,7 +37,6 @@ set(leetcode  ${OBJ_FILES})
 
 foreach(test1 ${leetcode})
     add_executable("${test1}" ${test1}.cc)
-    target_link_libraries(${test1} gtest pthread benchmark)
     target_compile_options(${test1} PUBLIC "-DTEST_ADQ")
     target_compile_options(${test1} PUBLIC "-Wall")
     target_compile_options(${test1} PRIVATE "-fsanitize=address")
